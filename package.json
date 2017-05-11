@@ -1,0 +1,63 @@
+{
+  "name": "wpstart",
+  "version": "1.0.0",
+  "description": "react redux skeleton",
+  "author": {
+    "name": "Ben Goldstein",
+    "email": "bengoldsteinmusic@gmail.com"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "private": true,
+  "keywords": [
+    "webpack"
+  ],
+  "scripts": {
+    "test": "echo \"test\"",
+    "lint": "eslint app/ --cache; exit 0",
+    "clean": "test -d public/build/ && rm -r public/build/ && echo 'build cleaned'|| echo 'no build to clean'",
+    "watch": "npm run clean; webpack --watch --progress --colors & npm start",
+    "build": "npm run clean; webpack -p --progress --colors",
+    "dev-build": "npm run clean; NODE_ENV=development webpack -p --progress --colors",
+    "prod-build": "npm run clean; NODE_ENV=production webpack -p --progress --colors"
+  },
+  "engine": "node 7.4.0",
+  "dependencies": {
+    "express": "^4.14.0",
+    "forever": "^0.15.3",
+    "mobile-detect": "^1.3.5",
+    "moment": "^2.17.1",
+    "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-meta-tags": "^0.1.3",
+    "react-progress-button": "^5.0.2",
+    "react-redux": "^5.0.2",
+    "react-router": "^3.0.1",
+    "react-svg": "^2.1.18",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "underscore": "^1.8.3",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "commander": "^2.9.0",
+    "css-loader": "^0.26.1",
+    "enzyme": "^2.7.1",
+    "eslint": "^3.14.1",
+    "eslint-plugin-react": "^6.9.0",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "2.14.0",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.14.0"
+  }
+}

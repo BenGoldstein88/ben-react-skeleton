@@ -1,0 +1,114 @@
+:global {
+  // @Variables
+  @action-blue: rgba(100,185,250,1);
+  @action-orange: rgba(240,132,72,1);
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100vw;
+    box-sizing: border-box;
+    // font-family: 'Quicksand', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    cursor: default;
+
+
+    @media screen and (min-width: 2200px){
+      font-size: 24px;
+    }
+    @media screen and (min-width: 3200px){
+      font-size: 30px;
+    }
+    @media screen and (max-width: 1200px){
+      font-size: 14px;
+    }
+    @media screen and (max-width: 900px){
+      font-size: 12px;
+    }
+    @media screen and (max-width: 600px){
+      font-size: 8.6px;
+    }
+  }
+
+  * {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button:active{
+    outline: none;
+  }
+
+  input {
+    user-select: auto;
+    -webkit-user-select: auto;
+    border: none;
+    outline: none;
+
+  }
+
+  #app-wrapper {
+    position: absolute;
+    width: 100vw;
+    box-sizing: border-box;
+
+  }
+
+
+  .app {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: white;
+    z-index: 1;
+  }
+
+  // New Page
+  .new-page {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    .page-title {
+      margin: auto;
+      min-width: 800px;
+      position: relative;
+      text-align: center;
+      font-size: 2.5em;
+      color: @action-orange;
+      z-index: 5;
+    }
+
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+
+      img {
+        margin:auto;
+      }
+    }
+  }
+
+
+//End of Global
+}
